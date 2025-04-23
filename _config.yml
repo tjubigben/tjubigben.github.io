@@ -1,4 +1,9 @@
 # Setup
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: vszhub/not-pure-poole
+
 title: Not Pure Poole
 description: A simple, beautiful, and powerful Jekyll theme for blogs
 url: https://vszhub.github.io
