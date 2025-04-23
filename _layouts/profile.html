@@ -4,45 +4,4 @@ layout: default
 
 {% include home-header.html %}
 
-<div class="profile">
-  <div class="profile-header">
-    <h1 class="profile-title">{{ page.title }}</h1>
-    {% if page.subtitle %}
-    <div class="profile-subtitle">{{ page.subtitle }}</div>
-    {% endif %}
-  </div>
-
-  <div class="profile-content">
-    {{ content }}
-  </div>
-
-  {% if page.skills %}
-  <div class="profile-skills">
-    <h2>技能专长</h2>
-    <ul class="skill-list">
-      {% for skill in page.skills %}
-      <li class="skill-item">
-        <span class="skill-name">{{ skill.name }}</span>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: {{ skill.level }}%"></div>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-
-  {% if page.projects %}
-  <div class="profile-projects">
-    <h2>项目经历</h2>
-    <div class="project-list">
-      {% for project in page.projects %}
-      <div class="project-item">
-        <h3 class="project-title">{{ project.title }}</h3>
-        <div class="project-description">{{ project.description }}</div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
-</div> 
+{{ content }}

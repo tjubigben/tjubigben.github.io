@@ -6,18 +6,18 @@
       {%- else -%}
         {%- assign avatar = site.avatar | relative_url -%}
       {%- endif -%}
-      <img src="{{ avatar }}" class="avatar-image" alt="{{ site.author.name }}">
+      <!-- <img src="{{ avatar }}" class="avatar-image" alt="{{ site.author.name }}"> -->
     </div>
   {%- endif %}
 
   <div class="masthead-title">
-    <a href="{{ "/" | relative_url }}" title="Home">{{ site.title }}</a>
+    <a href="{{ '/' | relative_url }}" title="Home">{{ site.title }}</a>
   </div>
   <div class="masthead-tagline">
     <small>{{ site.description }}</small>
   </div>
 
-  {%- if site.data.navigation -%}
+  <!-- {%- if site.data.navigation -%}
   <nav class="navigation">
     <ul class="navigation-list">
     {%- for nav in site.data.navigation -%}
@@ -27,7 +27,7 @@
     {%- endfor -%}
     </ul>
   </nav>
-  {%- endif -%}
+  {%- endif -%} -->
 
   
   {% if site.data.social -%}

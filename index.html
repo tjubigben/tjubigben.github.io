@@ -1,90 +1,171 @@
 ---
 layout: profile
-title: 个人介绍
-subtitle: 软件工程师 / 开发者 / 博主
+<!-- title: 王凯 -->
+subtitle: 
 ---
 
-<img src="/avatar.jpeg" alt="个人头像" class="profile-avatar">
-
-<div class="profile-social">
-  {% for social in site.data.social %}
-  <a href="{{ social.url }}" class="profile-social-link" title="{{ social.title }}" target="_blank">
-    <i class="{{ social.icon }}"></i>
-  </a>
-  {% endfor %}
-</div>
-
-## 关于我
-
-你好，我是一名热爱技术和创新的软件工程师。拥有丰富的开发经验，专注于Web开发和人工智能应用。欢迎来到我的个人网站，这里将分享我的专业技能、项目经验以及技术博客。
-
-## 教育背景
-
-- **硕士学位** - 计算机科学，清华大学 (2020-2023)
-- **学士学位** - 软件工程，北京大学 (2016-2020)
-
-## 工作经历
-
-- **高级开发工程师** - 科技公司 (2023-至今)
-  - 负责核心产品的架构设计和开发
-  - 带领5人团队完成多个重点项目
-  - 引入新技术栈，提高团队开发效率30%
-
-- **软件开发实习生** - 互联网企业 (2019-2020)
-  - 参与开发企业级Web应用
-  - 优化现有代码库，提高应用性能
-
-{% assign skills = "
-  Python:90,
-  JavaScript:85,
-  React:80,
-  Node.js:75,
-  数据分析:85,
-  机器学习:70,
-  Docker:65,
-  Git:95
-" | split: "," %}
-
-<div class="profile-skills">
-  <h2>技能专长</h2>
-  <ul class="skill-list">
-    {% for skill_item in skills %}
-      {% assign skill_parts = skill_item | split: ":" %}
-      <li class="skill-item">
-        <span class="skill-name">{{ skill_parts[0] }}</span>
-        <div class="skill-bar">
-          <div class="skill-level" style="width: {{ skill_parts[1] }}%"></div>
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-## 项目展示
-
-<div class="project-list">
-  <div class="project-item">
-    <h3 class="project-title">智能分析平台</h3>
-    <div class="project-description">
-      基于Python和React开发的数据分析平台，整合机器学习算法，为用户提供直观的数据可视化和智能决策支持。
+<div class="resume-container">
+  <div class="resume-header">
+    <div class="resume-name-contact">
+      <h1 class="resume-name">王凯</h1>
+      <p class="resume-contact">男|中共党员|天津大学|硕士</p>
+      <p class="resume-contact">2605121231@qq.com</p>
+    </div>
+    <div class="resume-photo">
+      <img src="/my.jpg" alt="个人照片" class="profile-avatar">
     </div>
   </div>
+
+  <div class="resume-divider"></div>
+
+  <div class="resume-section">
+    <h2 class="resume-section-title">教育背景</h2>
+    <table class="resume-table">
+      <tr>
+        <td width="33%">2018.09—2021.01</td>
+        <td width="33%">天津大学</td>
+        <td width="33%">软件工程（硕士）</td>
+      </tr>
+      <tr>
+        <td>2014.09—2018.06</td>
+        <td>杭州电子科技大学</td>
+        <td>软件工程（本科）</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="resume-divider"></div>
+
+  <div class="resume-section">
+    <h2 class="resume-section-title">工作经历</h2>
+    
+    <div class="resume-job">
+      <div class="resume-job-header">
+        <span class="resume-job-date">2021.12—今</span>
+        <span class="resume-job-company">科优医院</span>
+        <span class="resume-job-title">后端开发工程师</span>
+      </div>
+      <p class="resume-job-description">参与与中国人事调研关系、巨有从0到1搭设人事表格管控平台，建设Workforce平台，以及开发新HCM平台。其中人平主数据平台已对接9个系统，解决系统间数据质量问题，从而支撑老团队净化信息化建设。新HCM平台和Workforce平台通过补充员头流程和服务，从而配合老团队本地文献的完成。此次参与了团队面试建设和DevOps工具的统一等。</p>
+    </div>
+    
+    <div class="resume-job">
+      <div class="resume-job-header">
+        <span class="resume-job-date">2021.04—2021.12</span>
+        <span class="resume-job-company">北京雅创信息科技有限公司</span>
+        <span class="resume-job-title">后端开发工程师</span>
+      </div>
+      <p class="resume-job-description">工作内容：整合百横渠丽对营销模块优化与升级，包括对banner, deal, landing page等升级；App首页哦臣优化化，由200ms优化为100ms；源码单强覆盖率由17%提升到40%。独立位置设计开发变态警察者，成功支撑新版本，如应客商脸的"置五"天空。</p>
+    </div>
+    <div class="resume-job">
+      <div class="resume-job-header">
+        <span class="resume-job-date">2020.11—2021.04</span>
+        <span class="resume-job-company">京东物流</span>
+        <span class="resume-job-title">后端开发工程师(实习)</span>
+      </div>
+      <p class="resume-job-description">所在部门为仓储平台组。参与WMS6.0系统视勋及用户模块的开发，包括规则的修改，面授，问校，同步等相关功能；外设任务的开发；流车机制的优化与完善，以及单无刷试的完善；</p>
+    </div>
+    
+  </div>
+  <div class="resume-divider"></div>
   
-  <div class="project-item">
-    <h3 class="project-title">企业管理系统</h3>
-    <div class="project-description">
-      使用Node.js和Vue开发的现代化企业管理系统，实现了工作流自动化和多端数据同步。
-    </div>
-  </div>
-  
-  <div class="project-item">
-    <h3 class="project-title">开源贡献</h3>
-    <div class="project-description">
-      积极参与开源社区，为多个流行框架贡献代码，并维护个人开源项目。
-    </div>
+  <div class="resume-section">
+    <h2 class="resume-section-title">专业技能</h2>
+    <ol class="resume-skills-list">
+      <li>熟练掌握Java语言，阅读过JDK相关源码，了解核心内容原理，如volatile、synchronize、线程池等，且有良好的编码能力，能够熟练运用开发调整技术进行开发。</li>
+      <li>熟悉Java高并发编程，对各种锁机制，线程池机制等都有深入理解，在项目中有多线程使用经验。</li>
+      <li>熟悉JVM原理，基础垃圾回收机制，次要垃圾回收，改如垃圾回收算法，以及JVM调优，处理过线上OOM问题，并在项目中成功应用JVM调优。</li>
+      <li>熟练运用扭计模式进行开发，如单例模式，工厂设计模式，策略设计式，装饰设计式，模块化法等。</li>
+      <li>熟悉Spring，SpringBoot，Mybatis等框架，可以通过框架快速构建项目日，有过核心部分。</li>
+      <li>熟练使用Redis进行功能开发，了解Redis的基础数据结构和，持久化，复制，主从，哨兵，集群等平王城原理的一致性，能在平安交付技术方案。</li>
+      <li>深入理解RabbitMQ应用原理和设计，如消息化机制，死信队列，延迟队列，消息可靠传输等</li>
+      <li>了解MySQL InnoDB引擎，B+树，流畅索引，查询优化，以及事务隔离级别，学习隔离级别，mvcc等等</li>
+      <li>涉流使用阿里云DataWorks、QuickBI、DataV等数据平台。</li>
+    </ol>
   </div>
 </div>
 
-## 博客文章
+<style>
+.resume-container {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
 
-最新的技术博客和思考可以在[博客页面](/blog/)查看。
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.resume-name {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+}
+
+.resume-contact {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.resume-divider {
+  height: 2px;
+  background-color: #333;
+  margin: 15px 0;
+}
+
+.resume-section {
+  margin-bottom: 20px;
+}
+
+.resume-section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resume-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resume-table td {
+  padding: 5px 0;
+}
+
+.resume-job {
+  margin-bottom: 15px;
+}
+
+.resume-job-header {
+  margin-bottom: 5px;
+}
+
+.resume-job-date, .resume-job-company, .resume-job-title {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.resume-job-description {
+  font-size: 14px;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.resume-skills-list {
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.resume-skills-list li {
+  margin-bottom: 8px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 160px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+</style>
