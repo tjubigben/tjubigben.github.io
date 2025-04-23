@@ -1,9 +1,9 @@
 // 个人介绍页面样式
 
 .profile {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.5rem;
 }
 
 .profile-header {
@@ -66,7 +66,7 @@
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 

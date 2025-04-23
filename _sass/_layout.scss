@@ -50,11 +50,20 @@ footer {
   .home-header {
     margin-top: -2em;
   }
+  
+  .sidebar-right {
+    width: 10%;
+  }
 }
 
 @media (min-width: $lg-width) {
   .sidebar-right {
     display: block;
+    width: 10%;
+  }
+  
+  .content {
+    width: 65%;
   }
 }
 
@@ -73,5 +82,7 @@ footer {
 @media (min-width: $md-width) and (max-width: $lg-width) {
   .content {
     width: 75%;
+    padding-right: var(--spacer);
+    margin-right: 0;
   }
 }
