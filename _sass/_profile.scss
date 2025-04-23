@@ -1,0 +1,115 @@
+// 个人介绍页面样式
+
+.profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.profile-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--heading-color);
+}
+
+.profile-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--body-color-light);
+}
+
+.profile-content {
+  margin-bottom: 3rem;
+}
+
+.profile-skills {
+  margin-bottom: 3rem;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.skill-bar {
+  height: 0.75rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background: var(--link-color);
+  border-radius: 0.25rem;
+}
+
+.profile-projects {
+  margin-bottom: 3rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-item {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: block;
+  border: 3px solid var(--link-color);
+}
+
+.profile-social {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.profile-social-link {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--body-color);
+  transition: color 0.2s ease;
+}
+
+.profile-social-link:hover {
+  color: var(--link-color);
+} 

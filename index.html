@@ -1,3 +1,90 @@
 ---
-layout: home
+layout: profile
+title: 个人介绍
+subtitle: 软件工程师 / 开发者 / 博主
 ---
+
+<img src="/avatar.jpeg" alt="个人头像" class="profile-avatar">
+
+<div class="profile-social">
+  {% for social in site.data.social %}
+  <a href="{{ social.url }}" class="profile-social-link" title="{{ social.title }}" target="_blank">
+    <i class="{{ social.icon }}"></i>
+  </a>
+  {% endfor %}
+</div>
+
+## 关于我
+
+你好，我是一名热爱技术和创新的软件工程师。拥有丰富的开发经验，专注于Web开发和人工智能应用。欢迎来到我的个人网站，这里将分享我的专业技能、项目经验以及技术博客。
+
+## 教育背景
+
+- **硕士学位** - 计算机科学，清华大学 (2020-2023)
+- **学士学位** - 软件工程，北京大学 (2016-2020)
+
+## 工作经历
+
+- **高级开发工程师** - 科技公司 (2023-至今)
+  - 负责核心产品的架构设计和开发
+  - 带领5人团队完成多个重点项目
+  - 引入新技术栈，提高团队开发效率30%
+
+- **软件开发实习生** - 互联网企业 (2019-2020)
+  - 参与开发企业级Web应用
+  - 优化现有代码库，提高应用性能
+
+{% assign skills = "
+  Python:90,
+  JavaScript:85,
+  React:80,
+  Node.js:75,
+  数据分析:85,
+  机器学习:70,
+  Docker:65,
+  Git:95
+" | split: "," %}
+
+<div class="profile-skills">
+  <h2>技能专长</h2>
+  <ul class="skill-list">
+    {% for skill_item in skills %}
+      {% assign skill_parts = skill_item | split: ":" %}
+      <li class="skill-item">
+        <span class="skill-name">{{ skill_parts[0] }}</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: {{ skill_parts[1] }}%"></div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+## 项目展示
+
+<div class="project-list">
+  <div class="project-item">
+    <h3 class="project-title">智能分析平台</h3>
+    <div class="project-description">
+      基于Python和React开发的数据分析平台，整合机器学习算法，为用户提供直观的数据可视化和智能决策支持。
+    </div>
+  </div>
+  
+  <div class="project-item">
+    <h3 class="project-title">企业管理系统</h3>
+    <div class="project-description">
+      使用Node.js和Vue开发的现代化企业管理系统，实现了工作流自动化和多端数据同步。
+    </div>
+  </div>
+  
+  <div class="project-item">
+    <h3 class="project-title">开源贡献</h3>
+    <div class="project-description">
+      积极参与开源社区，为多个流行框架贡献代码，并维护个人开源项目。
+    </div>
+  </div>
+</div>
+
+## 博客文章
+
+最新的技术博客和思考可以在[博客页面](/blog/)查看。

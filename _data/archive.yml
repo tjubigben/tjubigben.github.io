@@ -1,9 +1,15 @@
+
+- type: profile
+  title: 首页
+  url: /
 - type: dates
-  title: Dates
+  title: 项目
   url: /dates/
+- type: tags
+  title: 个人博客
+  url: /tags/
+
+
 #- type: categories
 #  title: Categories
 #  url: /categories/
-- type: tags
-  title: Tags
-  url: /tags/
