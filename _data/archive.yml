@@ -1,13 +1,13 @@
 
-- type: profile
+- type: home
   title: 首页
   url: /
-- type: dates
-  title: 项目简介
+- type: projects
+  title: 项目经历
   url: /dates/
-- type: tags
-  title: 个人博客
-  url: /tags/
+- type: blog
+  title: 博客
+  url: /blog/
 
 
 #- type: categories
