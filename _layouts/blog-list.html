@@ -4,19 +4,33 @@ layout: default
 
 {% include home-header.html %}
 
-<div class="blog-list-container">
-  <h1 class="blog-list-title">{{ page.title }}</h1>
-  
+<div class="blog-container">
   <div class="blog-articles">
     {% for post in site.posts %}
-    <article class="blog-article-item">
-      <div class="article-header">
-        <span class="article-tag">原创</span>
-        <a href="{{ post.url | relative_url }}" class="article-title">{{ post.title }}</a>
-      </div>
-      
-      <div class="article-excerpt">
-        {{ post.excerpt | strip_html | truncatewords: 50 }}
+    <article class="blog-card">
+      <div class="blog-card-content">
+        <div class="blog-card-meta">
+          <span class="blog-card-category">{{ post.categories | first | default: '技术' }}</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</time>
+        </div>
+
+        <h2 class="blog-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+
+        <p class="blog-card-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 40 }}
+        </p>
+
+        <div class="blog-card-footer">
+          <a href="{{ post.url | relative_url }}" class="read-more">
+            阅读全文
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
     </article>
     {% endfor %}
@@ -24,123 +38,143 @@ layout: default
 </div>
 
 <style>
-.blog-list-container {
-  max-width: 1000px;
+.blog-container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-.blog-list-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #333;
+  padding: 2rem 1.5rem;
 }
 
 .blog-articles {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 1.5rem;
 }
 
-.blog-article-item {
+.blog-card {
   background: #fff;
-  padding: 24px 20px;
-  border-bottom: 1px solid #e4e6eb;
-  transition: background-color 0.2s ease;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
-.blog-article-item:hover {
-  background: #fafafa;
+.blog-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--accent-light);
 }
 
-.article-header {
+.blog-card-meta {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
 }
 
-.article-tag {
+.blog-card-category {
   display: inline-block;
-  padding: 2px 8px;
-  background: #fc5531;
-  color: white;
-  font-size: 12px;
-  border-radius: 2px;
+  padding: 0.25rem 0.75rem;
+  background: var(--accent-light);
+  color: var(--accent-color);
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.blog-card-meta time {
+  color: var(--gray-400);
   font-weight: 500;
 }
 
-.article-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-  text-decoration: none;
+.blog-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
   line-height: 1.4;
-  flex: 1;
+}
+
+.blog-card-title a {
+  color: var(--heading-color);
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.article-title:hover {
-  color: #fc5531;
+.blog-card-title a:hover {
+  color: var(--accent-color);
 }
 
-.article-excerpt {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 12px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.blog-card-excerpt {
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
-.article-meta {
+.blog-card-footer {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: #999;
+  justify-content: flex-start;
 }
 
-.meta-item {
-  display: flex;
+.read-more {
+  display: inline-flex;
   align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.meta-separator {
-  color: #d4d4d4;
-  font-weight: 300;
+.read-more:hover {
+  gap: 0.75rem;
+  color: var(--accent-hover);
+}
+
+.read-more svg {
+  transition: transform 0.2s ease;
+}
+
+.read-more:hover svg {
+  transform: translateX(3px);
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-  .blog-list-container {
-    padding: 10px;
+  .blog-container {
+    padding: 1.5rem 1rem;
   }
-  
-  .blog-list-title {
-    font-size: 22px;
-    margin-bottom: 20px;
+
+  .blog-card {
+    padding: 1.5rem;
   }
-  
-  .blog-article-item {
-    padding: 16px 12px;
+
+  .blog-card-title {
+    font-size: 1.25rem;
   }
-  
-  .article-title {
-    font-size: 16px;
+
+  .blog-card-excerpt {
+    font-size: 0.9375rem;
   }
-  
-  .article-excerpt {
-    font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-card {
+    background: var(--gray-800);
+    border-color: var(--gray-700);
   }
-  
-  .article-meta {
-    flex-wrap: wrap;
-    font-size: 12px;
+
+  .blog-card:hover {
+    border-color: var(--accent-color);
+  }
+
+  .blog-card-excerpt {
+    color: var(--gray-400);
   }
 }
 </style>
