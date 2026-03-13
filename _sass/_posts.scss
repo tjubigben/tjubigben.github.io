@@ -89,8 +89,10 @@
 }
 
 .post-header-content {
-  max-width: 720px;
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .post-categories {
@@ -162,18 +164,18 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
-// Post content area
+// Post content area - fluid width with padding
 .post-content {
   padding: 2.5rem;
-  max-width: 720px;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 // Post footer
 .post-footer {
   padding: 0 2.5rem 2.5rem;
-  max-width: 720px;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .comment-count {
@@ -190,12 +192,11 @@
 // Related posts
 .related {
   padding: var(--spacer-2);
-  margin-bottom: var(--spacer-2);
+  margin: 0 2.5rem 2rem;
   background: var(--gray-100);
   border-radius: var(--border-radius);
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+  width: auto;
+  max-width: none;
 
   h2 {
     margin-top: 0;
@@ -311,23 +312,96 @@
 // Responsive adjustments
 @media (max-width: 768px) {
   .post-header {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
   }
 
   .post-title {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
 
   .post-content {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   .post-footer {
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 1rem 1.5rem;
   }
 
   .post-meta {
     font-size: 0.875rem;
+  }
+
+  .related {
+    margin: 0 1rem 1.5rem;
+  }
+}
+
+// OpenClaw article layout - vertical sections (image on top, text below)
+.openclaw-section {
+  margin: 2rem 0;
+}
+
+.section-image {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.section-content {
+  h3 {
+    margin-top: 0;
+    color: var(--heading-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  h4 {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    margin: 0.75rem 0;
+    padding-left: 1.25rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+}
+
+// Image row for multiple images
+.image-row {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
   }
 }
 
