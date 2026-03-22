@@ -26,11 +26,11 @@ toc: true
 
 下面这 5 种，是最核心的。
 
-![5种核心Skill模式](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5j5BPEVJq3p/img/424e0667-20d8-46a6-8825-5ed3585a712e.png)
+![5种核心Skill模式](/assets/images/how-to-write-good-skill/01-patterns-overview.png)
 
 ## 模式1：工具包装（Tool Wrapper）
 
-![Tool Wrapper](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5j5BPEVJq3p/img/333a8e75-9ca7-41c3-81af-e378911f3cf9.png)
+![Tool Wrapper](/assets/images/how-to-write-good-skill/02-tool-wrapper.png)
 
 **一句话：把模型不会的能力，变成它会用的能力。** 让 Agent 成为某个库/框架的专家。
 
@@ -88,7 +88,7 @@ Load 'references/conventions.md' for the complete list of FastAPI best practices
 
 ## 模式2：Generator（生成器）
 
-![Generator](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5j5BPEVJq3p/img/0b33720d-7970-419e-bfb0-e7b40fb35ebf.png)
+![Generator](/assets/images/how-to-write-good-skill/03-generator.png)
 
 "让 Agent 像流水线，而不是即兴发挥" 👉 保证输出结构稳定一致
 
@@ -137,7 +137,7 @@ Step 5: Return the completed report as a single Markdown document.
 
 ## 模式3：Reviewer（审查器）
 
-![Reviewer](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5j5BPEVJq3p/img/e8595f00-6ac2-47f4-853f-11931168a4e7.png)
+![Reviewer](/assets/images/how-to-write-good-skill/04-reviewer.png)
 
 **一句话：专门用来"挑错"的 Skill。**
 
@@ -186,7 +186,7 @@ Step 4: Produce a structured review with these sections:
 
 ## 模式4：Inversion（反转控制）
 
-![Inversion](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5j5BPEVJq3p/img/c7e9477a-dc89-48fe-9373-17439dddb99b.png)
+![Inversion](/assets/images/how-to-write-good-skill/05-inversion.png)
 
 **一句话：先问清楚，再动手。**
 
@@ -249,7 +249,7 @@ Ask these questions in order. Do not skip any.
 
 ## 模式5：Pipeline（流水线）
 
-![Pipeline](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5j5BPEVJq3p/img/fe3adfb7-0063-4c99-adfd-fc7b15055ee3.png)
+![Pipeline](/assets/images/how-to-write-good-skill/06-pipeline.png)
 
 对于复杂任务，容不得跳过任何步骤或忽略任何指令。流水线模式强制执行严格的顺序工作流程，并设置了关键的检查点。
 
@@ -318,7 +318,7 @@ Report results. Fix issues before presenting the final document.
 | 需求不明确 | Inversion |
 | 多步骤复杂流程 | Pipeline |
 
-![如何选择模式](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/4j6OJ5j5BPEVJq3p/img/178dbb4e-7208-41d0-b0be-c0aba5f19386.png)
+![如何选择模式](/assets/images/how-to-write-good-skill/07-how-to-choose.png)
 
 # 更重要的一点：可以组合使用
 
