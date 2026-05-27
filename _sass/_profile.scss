@@ -218,10 +218,9 @@
 
 .resume-job-description {
   margin: 0.25rem 0 0;
-  color: rgba(248, 251, 255, 0.94);
+  color: var(--body-color);
   font-size: 0.95rem;
   line-height: 1.82;
-  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.18);
 }
 
 .resume-skills-list {
