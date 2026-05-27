@@ -72,6 +72,26 @@ The theme is loaded via `jekyll-remote-theme: vszhub/not-pure-poole`. To customi
 - **Navigation**: edit `_data/navigation.yml`
 - **Social links**: edit `_data/social.yml` (icon values are Font Awesome classes)
 
+## Style Architecture
+
+The site uses a glassmorphism design with CSS variables defined in `_sass/_variables.scss`:
+
+- **Glass effect variables**: `--glass-bg`, `--glass-bg-strong`, `--glass-shadow`, `--glass-highlight`
+- **Dark mode**: Automatically switches via `@media (prefers-color-scheme: dark)`
+- **Key style files**:
+  - `_sass/_posts.scss` — Article cards (`.post-entry`)
+  - `_sass/_profile.scss` — Profile cards (`.resume-card`, `.project-item`)
+  - `_sass/_variables.scss` — CSS variables for theming
+
+## Layouts
+
+Custom layouts in `_layouts/`:
+- `default.html` — Base layout
+- `home.html` — Homepage
+- `post.html` — Blog post
+- `profile.html` — Profile/about page
+- `archive-dates.html`, `archive-taxonomies.html` — Archive pages
+
 ## Deployment
 
 The site deploys automatically to GitHub Pages when changes are pushed to the `main` branch. The `CNAME` file sets the custom domain.
