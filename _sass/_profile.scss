@@ -112,4 +112,99 @@
 
 .profile-social-link:hover {
   color: var(--link-color);
-} 
+}
+
+.resume-container {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.resume-name {
+  margin: 0 0 0.625rem;
+  font-size: 2.25rem;
+}
+
+.resume-contact {
+  margin: 0.3125rem 0;
+  font-size: 0.875rem;
+}
+
+.resume-divider {
+  height: 2px;
+  margin: 0.9375rem 0;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.16), rgba(255, 255, 255, 0.72), rgba(59, 130, 246, 0.16));
+}
+
+.resume-section {
+  margin-bottom: 1.25rem;
+}
+
+.resume-section-title {
+  margin-bottom: 0.625rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.resume-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resume-table td {
+  padding: 0.3125rem 0;
+}
+
+.resume-job {
+  margin-bottom: 0.9375rem;
+}
+
+.resume-job-header {
+  margin-bottom: 0.3125rem;
+}
+
+.resume-job-date,
+.resume-job-company,
+.resume-job-title {
+  display: inline-block;
+  margin-right: 0.9375rem;
+}
+
+.resume-job-description {
+  margin: 0.3125rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.resume-skills-list {
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.resume-skills-list li {
+  margin-bottom: 0.5rem;
+}
+
+.resume-container .profile-avatar {
+  width: 120px;
+  height: 160px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 0;
+  object-fit: cover;
+  box-shadow: var(--glass-shadow);
+}
+
+@media (max-width: 48rem) {
+  .resume-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}

@@ -4,11 +4,7 @@ layout: default
 
 {% include home-header.html %}
 
-<h1>{{ page.title }}</h1>
-
 <div class="resume-section" style="margin-bottom: 40px;">
-  <h2 class="resume-section-title">项目经历</h2>
-  
   <div class="project-item">
     <h3 class="project-title">人事主数据智联平台 (MDM)</h3>
     <div class="project-meta">2023.03 - 2024.02 | 核心后端开发 | Spring Boot + MyBatis Plus + RabbitMQ + Redis</div>
@@ -175,37 +171,40 @@ layout: default
 .project-item {
   margin-bottom: 30px;
   padding: 20px;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.02);
-  border-left: 4px solid #1e70bf;
+  border-radius: 18px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--glass-shadow), var(--glass-highlight);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-item:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
 }
 
 .project-title {
   font-size: 18px;
   font-weight: bold;
   margin: 0 0 10px 0;
-  color: #1e70bf;
+  color: var(--accent-color);
 }
 
 .project-meta {
   font-size: 13px;
-  color: #666;
+  color: var(--gray-500);
   margin-bottom: 12px;
   font-style: italic;
   padding-bottom: 8px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.46);
 }
 
 .project-description {
   font-size: 14px;
   line-height: 1.8;
-  color: #333;
+  color: var(--body-color);
 }
 
 .project-description p {
@@ -223,7 +222,7 @@ layout: default
 }
 
 .project-description strong {
-  color: #1e70bf;
+  color: var(--accent-color);
   font-weight: 600;
 }
 </style>

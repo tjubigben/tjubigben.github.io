@@ -1,8 +1,14 @@
 ---
 layout: page
-title: About
+title: 关于
 ---
 
-*Not Pure Poole* is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
+这里是王凯的个人站点，主要记录三类内容：
 
-For more information about Not Pure Poole, please browse the [README](https://github.com/vszhub/not-pure-poole) file.
+- AI 工具与 Agent 实践
+- 软件工程中的方法、经验和踩坑
+- 值得长期积累的技术思考
+
+我更关心“难且正确”的事情，也更愿意写那些能真正帮人少走弯路的内容。
+
+如果你想交流，可以通过侧边栏里的邮箱或 GitHub 找到我。

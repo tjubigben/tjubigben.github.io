@@ -13,6 +13,13 @@ body {
   line-height: var(--body-line-height);
   color: var(--body-color);
   background-color: var(--body-bg);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.9), transparent 24%),
+    radial-gradient(circle at 82% 12%, rgba(191, 219, 254, 0.6), transparent 22%),
+    radial-gradient(circle at 75% 78%, rgba(196, 181, 253, 0.28), transparent 18%),
+    linear-gradient(180deg, #f7faff 0%, #edf3fb 48%, #e8eef8 100%);
+  background-size: auto;
+  background-attachment: fixed;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -67,4 +74,29 @@ mark {
   padding: .15rem;
   background-color: var(--yellow-100);
   border-radius: .125rem;
+}
+
+main {
+  position: relative;
+}
+
+main::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24), transparent 40%),
+    radial-gradient(circle at 22% 24%, rgba(255, 255, 255, 0.18), transparent 16%),
+    radial-gradient(circle at 85% 14%, rgba(147, 197, 253, 0.14), transparent 18%);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image:
+      radial-gradient(circle at 14% 18%, rgba(59, 130, 246, 0.14), transparent 22%),
+      radial-gradient(circle at 82% 12%, rgba(125, 211, 252, 0.12), transparent 20%),
+      radial-gradient(circle at 70% 78%, rgba(167, 139, 250, 0.1), transparent 18%),
+      linear-gradient(180deg, #0f1726 0%, #0c1422 55%, #0a1120 100%);
+  }
 }

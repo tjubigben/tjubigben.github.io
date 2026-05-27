@@ -4,13 +4,15 @@
 // page is wrapped in `.page` and is only used on the page layout.
 
 .post-entry {
-  background: #fff;
+  background: var(--glass-bg);
   border-radius: var(--border-radius);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--glass-shadow), var(--glass-highlight);
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
 
   &:hover {
     box-shadow: var(--shadow-md);
@@ -22,10 +24,13 @@
 .post {
   font-family: var(--text-font);
   margin-bottom: 3rem;
-  background: #fff;
+  background: var(--glass-bg);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--glass-shadow), var(--glass-highlight);
   overflow: hidden;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(18px) saturate(155%);
+  -webkit-backdrop-filter: blur(18px) saturate(155%);
 
   h1, h2, h3, h4, h5, h6, .post-meta {
     font-family: var(--body-font);
@@ -193,10 +198,11 @@
 .related {
   padding: var(--spacer-2);
   margin: 0 2.5rem 2rem;
-  background: var(--gray-100);
+  background: rgba(255, 255, 255, 0.34);
   border-radius: var(--border-radius);
   width: auto;
   max-width: none;
+  border: 1px solid var(--border-color);
 
   h2 {
     margin-top: 0;
@@ -226,7 +232,7 @@
     justify-content: space-between;
     text-decoration: none;
     padding: 0.75rem 1rem;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.46);
     border-radius: var(--border-radius-sm);
     transition: all 0.2s ease;
     border: 1px solid var(--border-color);

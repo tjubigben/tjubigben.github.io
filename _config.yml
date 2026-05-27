@@ -1,18 +1,11 @@
-# Setup
-plugins:
-  - jekyll-remote-theme
-
-remote_theme: vszhub/not-pure-poole
-
 title: 王凯
 description: 做难且正确的事
-url: https://tjubigben.github.io
+url: https://ai-withu.cn
 avatar: /my.jpg
 paginate: 5
 permalink: pretty
 cover_image: /bg.jpeg
 
-# Gems
 plugins:
   - jekyll-gist
   - jekyll-paginate
@@ -35,16 +28,14 @@ exclude:
 
 # Optimize Jekyl SEO Tag
 twitter:
-  username: vszhub
   card: summary
-logo: logo.png
+logo: /my.jpg
 social:
-  name: Songzi Vong
+  name: 王凯
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
-google_site_verification: xxxxx
-lang: en
+    - https://github.com/tjubigben
+    - https://ai-withu.cn
+lang: zh-CN
 
 sass:
   sass_dir: _sass
@@ -60,6 +51,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: 王凯
+  url: https://ai-withu.cn/about/
+  email: 2605121231@qq.com
