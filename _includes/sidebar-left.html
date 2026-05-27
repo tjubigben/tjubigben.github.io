@@ -16,6 +16,11 @@
   <div class="masthead-tagline">
     <small>{{ site.description }}</small>
   </div>
+  {% if site.tagline %}
+  <div class="masthead-role">
+    <small>{{ site.tagline }}</small>
+  </div>
+  {% endif %}
 
   <!-- {%- if site.data.navigation -%}
   <nav class="navigation">

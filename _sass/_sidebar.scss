@@ -43,10 +43,17 @@
 
 .masthead-tagline {
   padding: 0;
-  margin: 0;
+  margin: 0.25rem 0 0;
   font-size: 1.25rem;
   font-weight: 400;
   opacity: .7;
+}
+
+.masthead-role {
+  margin-top: 0.875rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  opacity: 0.88;
 }
 
 .navigation-list {

@@ -1,12 +1,12 @@
 
 - type: home
-  title: 首页
+  title: 简介
   url: /
 - type: projects
-  title: 项目经历
+  title: 项目
   url: /dates/
 - type: blog
-  title: 博客
+  title: 文章
   url: /blog/
 
 
