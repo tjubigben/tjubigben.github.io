@@ -77,13 +77,13 @@ layout: default
     <div class="project-meta">2026.03 - 至今 | 技术负责人 / 全栈架构 | Spring Boot 3.3.4 + MyBatis-Plus + MySQL + Redis + Redisson + XXL-Job + React 18 + TypeScript + Ant Design 5</div>
     <div class="project-description">
       <p><strong>核心亮点：</strong>基于开源 PlayEdu 深度二次开发，从单体改造为 7 模块分层架构 + 三端前端体系（管理后台 / PC 学员端 / H5 移动端），覆盖课程学习、在线考试、培训任务全业务闭环，服务 20000+ 员工，年节约成本 30 万元</p>
-      <p><strong>项目背景：</strong>集团缺少统一培训平台，此前使用钉钉云课堂，费用高昂且无法满足定制化业务需求。需自建统一在线平台打通培训全流程，服务 20000+ 员工，相比云课堂年节省 30 万元。</p>
+      <p><strong>项目背景：</strong>集团缺少统一培训平台，此前使用钉钉云课堂，费用高昂且无法满足定制化业务需求。需自建统一在线平台打通培训全流程，服务 20000+ 员工。</p>
       <p><strong>核心职责：</strong></p>
       <p><strong>1. 整体架构设计与模块拆分</strong></p>
       <ul>
         <li>主导从单体到 7 模块 Maven 分层架构的重构，明确模块依赖边界</li>
-        <li>采用前后端完全分离：后端统一提供管理端和学员端两套接口体系，前端三个独立工程（admin / pc / h5）各司其职，互不耦合</li>
-        <li>对接钉钉开放平台、LDAP、XXL-Job 等企业基础设施</li>
+        <li>采用前后端分离：后端统一提供管理端和学员端两套接口体系，前端三个独立工程（admin / pc / h5）各司其职，互不耦合</li>
+        <li>对接钉钉开放平台、XXL-Job 等企业基础设施</li>
       </ul>
       <p><strong>2. 三大业务域的数据建模与实现</strong></p>
       <ul>
@@ -94,7 +94,7 @@ layout: default
       </ul>
       <p><strong>3. AI 赋能开发实践</strong></p>
       <ul>
-        <li><strong>Spec-Driven Development (SDD)</strong>：引入业界成熟的 AI 工程化方法论，将自动化测试、缺陷诊断、代码审查、架构分析等最佳实践标准化到开发流程中。每次迭代先对齐需求边界，再以测试驱动开发（TDD）模式交付，有效降低人与 AI 协作过程中的沟通偏差</li>
+        <li><strong>Spec-Driven Development (SDD)</strong>：引入业界成熟的 AI 工程化方法论，将自动化测试、缺陷诊断、代码审查、架构分析等最佳实践标准化到开发流程中，有效降低人与 AI 协作过程中的沟通偏差</li>
         <li><strong>Agent 知识库建设</strong>：维护 AGENTS.md（项目架构、模块依赖、编码规范）和 CLAUDE.md（Agent 技能注册、问题追踪配置），让 AI 助手每次进入项目都能快速理解上下文，减少重复解释</li>
         <li><strong>领域统一语言（Ubiquitous Language）</strong>：通过 CONTEXT.md 定义课程、考试、培训任务等核心概念的精准表述，统一团队与 AI 之间的术语体系，确保代码命名、注释与业务语义高度一致</li>
       </ul>
