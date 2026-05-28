@@ -82,8 +82,7 @@ layout: default
       <p><strong>1. 整体架构设计与模块拆分</strong></p>
       <ul>
         <li>主导从单体到 7 模块 Maven 分层架构的重构，明确模块依赖边界</li>
-        <li>模块间通过 Spring @EventListener 事件机制解耦，共 19 个事件/监听器对，避免循环依赖，新业务模块接入只需监听对应事件，无需修改已有代码</li>
-        <li>采用前后端完全分离：后端统一提供 /backend/v1/（管理端 API）和 /frontend/v1/（学员端 API）两套接口体系，前端三个独立工程（admin / pc / h5）各司其职，互不耦合</li>
+        <li>采用前后端完全分离：后端统一提供管理端和学员端两套接口体系，前端三个独立工程（admin / pc / h5）各司其职，互不耦合</li>
         <li>对接钉钉开放平台、LDAP、XXL-Job 等企业基础设施</li>
       </ul>
       <p><strong>2. 三大业务域的数据建模与实现</strong></p>
@@ -95,7 +94,7 @@ layout: default
       </ul>
       <p><strong>3. AI 赋能开发实践</strong></p>
       <ul>
-        <li><strong>Skill-Driven Development（SDD）</strong>：引入业界成熟的 AI 工程化方法论，将自动化测试、缺陷诊断、代码审查、架构分析等最佳实践标准化到开发流程中。每次迭代先对齐需求边界，再以测试驱动开发（TDD）模式交付，有效降低人与 AI 协作过程中的沟通偏差</li>
+        <li><strong>Spec-Driven Development (SDD)</strong>：引入业界成熟的 AI 工程化方法论，将自动化测试、缺陷诊断、代码审查、架构分析等最佳实践标准化到开发流程中。每次迭代先对齐需求边界，再以测试驱动开发（TDD）模式交付，有效降低人与 AI 协作过程中的沟通偏差</li>
         <li><strong>Agent 知识库建设</strong>：维护 AGENTS.md（项目架构、模块依赖、编码规范）和 CLAUDE.md（Agent 技能注册、问题追踪配置），让 AI 助手每次进入项目都能快速理解上下文，减少重复解释</li>
         <li><strong>领域统一语言（Ubiquitous Language）</strong>：通过 CONTEXT.md 定义课程、考试、培训任务等核心概念的精准表述，统一团队与 AI 之间的术语体系，确保代码命名、注释与业务语义高度一致</li>
       </ul>
